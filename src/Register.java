@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author muham
+ * @author umam, rafly, kiki
  */
 import java.sql.*;
 public class Register extends javax.swing.JFrame {

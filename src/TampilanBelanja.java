@@ -5,7 +5,7 @@
 
 /**
  *
- * @author muham
+ * @author umam, rafly, kiki
  */
 public class TampilanBelanja extends javax.swing.JFrame {
 
