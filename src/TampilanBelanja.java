@@ -47,10 +47,10 @@ public class TampilanBelanja extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(248, 239, 234));
+        jPanel1.setBackground(new java.awt.Color(207, 219, 218));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 229));
+        jPanel3.setBackground(new java.awt.Color(138, 170, 165));
 
         jLabel1.setFont(new java.awt.Font("Monotype Corsiva", 0, 48)); // NOI18N
         jLabel1.setText("StreetAttire Co");
@@ -98,10 +98,10 @@ public class TampilanBelanja extends javax.swing.JFrame {
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1326, 80));
 
-        jPanel4.setBackground(new java.awt.Color(255, 170, 143));
+        jPanel4.setBackground(new java.awt.Color(202, 189, 154));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 115, 110));
+        jPanel2.setBackground(new java.awt.Color(165, 149, 109));
 
         jLabel3.setFont(new java.awt.Font("Sitka Text", 0, 16)); // NOI18N
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/icons-buy.png"))); // NOI18N
@@ -123,7 +123,7 @@ public class TampilanBelanja extends javax.swing.JFrame {
 
         jPanel4.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 230, 60));
 
-        jPanel5.setBackground(new java.awt.Color(255, 115, 110));
+        jPanel5.setBackground(new java.awt.Color(165, 149, 109));
 
         jLabel4.setFont(new java.awt.Font("Sitka Text", 0, 16)); // NOI18N
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/icons-settings.png"))); // NOI18N
@@ -134,9 +134,9 @@ public class TampilanBelanja extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(52, 52, 52)
                 .addComponent(jLabel4)
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
