@@ -19,6 +19,8 @@ public class TampilanBelanja extends javax.swing.JFrame {
     
     public TampilanBelanja() {
         initComponents();
+        
+        String x = "";
     }
 
     /**
