@@ -168,14 +168,14 @@ public class Login extends javax.swing.JFrame {
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, e);
             }
+        }else if (jTextField1.getText().isEmpty() && jPasswordField1.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Isi data mu!", "Warning", JOptionPane.ERROR_MESSAGE);
+
         }else if (jTextField1.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Username belum diisi", "Informasi", JOptionPane.INFORMATION_MESSAGE);
 
         }else if(jPasswordField1.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Password belum diisi", "Informasi", JOptionPane.INFORMATION_MESSAGE);
-
-        }else {
-            JOptionPane.showMessageDialog(null, "Isi data mu!", "Warning", JOptionPane.ERROR_MESSAGE);
 
         }
         

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2023 at 09:03 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.1.17
+-- Waktu pembuatan: 21 Bulan Mei 2023 pada 06.40
+-- Versi server: 10.4.28-MariaDB
+-- Versi PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,13 +24,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `data`
+-- Struktur dari tabel `data`
 --
 
 CREATE TABLE `data` (
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `data`
+--
+
+INSERT INTO `data` (`username`, `password`) VALUES
+('coba', '123456789');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
