@@ -44,6 +44,7 @@ public class Register extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         rePasswordText = new javax.swing.JPasswordField();
         registerButton = new javax.swing.JButton();
+        jCheckBox1 = new javax.swing.JCheckBox();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -71,6 +72,11 @@ public class Register extends javax.swing.JFrame {
         jLabel4.setText("Password");
 
         passwordText.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        passwordText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordTextActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
         jLabel5.setText("Re-Password");
@@ -91,6 +97,16 @@ public class Register extends javax.swing.JFrame {
             }
         });
 
+        jCheckBox1.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jCheckBox1.setText("Show Password");
+        jCheckBox1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jCheckBox1.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -102,17 +118,19 @@ public class Register extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(usernameText, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(passwordText)
-                            .addComponent(rePasswordText)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(78, 78, 78)
-                        .addComponent(registerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(registerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox1)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(usernameText, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(passwordText)
+                                .addComponent(rePasswordText)))))
                 .addContainerGap(55, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -120,11 +138,11 @@ public class Register extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(usernameText, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(passwordText, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -132,9 +150,11 @@ public class Register extends javax.swing.JFrame {
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rePasswordText, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jCheckBox1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addComponent(registerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
 
         jLabel3.setFont(new java.awt.Font("Snap ITC", 0, 14)); // NOI18N
@@ -165,7 +185,7 @@ public class Register extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -199,8 +219,8 @@ public class Register extends javax.swing.JFrame {
         if (!usernameText.getText().isEmpty() && !passwordText.getText().isEmpty() && !rePasswordText.getText().isEmpty()) {
            if (!passwordText.getText().equals(rePasswordText.getText())) {
                 JOptionPane.showMessageDialog(null, "Password yang kamu masukkan tidak sesuai", "Informasi", JOptionPane.ERROR_MESSAGE);
-           }
-           try {
+           }else {
+               try {
                 st = cn.createStatement();
                 rs = st.executeQuery("select * from data where username = '" + username + "'");
                 if (rs.next()) {
@@ -221,6 +241,8 @@ public class Register extends javax.swing.JFrame {
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, e);
             }
+           }
+           
         }else if (usernameText.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Username belum diisi", "Informasi", JOptionPane.INFORMATION_MESSAGE);
         }else if (passwordText.getText().isEmpty()) {
@@ -237,6 +259,21 @@ public class Register extends javax.swing.JFrame {
         lg.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void passwordTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordTextActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+        if(jCheckBox1.isSelected()) {
+            passwordText.setEchoChar((char)0);
+            rePasswordText.setEchoChar((char)0);
+        }else {
+            passwordText.setEchoChar('*');
+            rePasswordText.setEchoChar('*');
+        }
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -274,6 +311,7 @@ public class Register extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

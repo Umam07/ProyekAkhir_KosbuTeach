@@ -1,5 +1,12 @@
 
+import java.awt.Desktop;
+import java.io.IOException;
+import static java.lang.System.err;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import javax.swing.JOptionPane;
+
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -19,7 +26,6 @@ public class TampilanBelanja extends javax.swing.JFrame {
     
     public TampilanBelanja() {
         initComponents();
-        
         String x = "";
     }
 
@@ -47,13 +53,25 @@ public class TampilanBelanja extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel11 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -128,11 +146,11 @@ public class TampilanBelanja extends javax.swing.JFrame {
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(0, 26, Short.MAX_VALUE)
-                                .addComponent(jButton1)))))
+                                .addComponent(jButton1))
+                            .addComponent(jLabel1))))
                 .addGap(16, 16, 16))
         );
 
@@ -196,146 +214,229 @@ public class TampilanBelanja extends javax.swing.JFrame {
 
         jPanel6.setBackground(new java.awt.Color(204, 204, 255));
 
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/Kaos2.jpg"))); // NOI18N
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 140, Short.MAX_VALUE)
+            .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
+            .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel11.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, 140, 150));
 
         jPanel7.setBackground(new java.awt.Color(204, 204, 255));
 
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/Kaos1.png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 140, Short.MAX_VALUE)
+            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
+            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel11.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 140, 150));
 
         jPanel8.setBackground(new java.awt.Color(204, 204, 255));
 
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/actionFigure.png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 140, Short.MAX_VALUE)
+            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
+            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel11.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, 140, 150));
 
         jPanel9.setBackground(new java.awt.Color(204, 204, 255));
 
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/Sepatu1.png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 140, Short.MAX_VALUE)
+            .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
+            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel11.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 20, 140, 150));
 
         jPanel10.setBackground(new java.awt.Color(204, 204, 255));
 
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/jam.jpg"))); // NOI18N
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 140, Short.MAX_VALUE)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel11.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 250, 140, 150));
 
         jPanel12.setBackground(new java.awt.Color(204, 204, 255));
 
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/tas.png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 140, Short.MAX_VALUE)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel11.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 250, 140, 150));
 
         jPanel13.setBackground(new java.awt.Color(204, 204, 255));
 
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/Kaos3.jpg"))); // NOI18N
+
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 140, Short.MAX_VALUE)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel11.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 140, 150));
 
         jPanel14.setBackground(new java.awt.Color(204, 204, 255));
 
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/Sepatu2.png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 140, Short.MAX_VALUE)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel11.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 140, 150));
+
+        jLabel18.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel18.setText("Harga : Rp. 300.000");
+        jPanel11.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 140, 20));
+
+        jLabel19.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel19.setText("Harga : Rp. 450.000");
+        jPanel11.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 140, 20));
+
+        jLabel20.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel20.setText("Harga : Rp. 2.500.000");
+        jPanel11.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 180, -1, 20));
+
+        jLabel21.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel21.setText("Harga : Rp. 250.000");
+        jPanel11.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 180, 140, 20));
 
         jScrollPane1.setViewportView(jPanel11);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 1100, 350));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/icons8-instagram-50.png"))); // NOI18N
+        jLabel6.addHierarchyBoundsListener(new java.awt.event.HierarchyBoundsListener() {
+            public void ancestorMoved(java.awt.event.HierarchyEvent evt) {
+                jLabel6AncestorMoved(evt);
+            }
+            public void ancestorResized(java.awt.event.HierarchyEvent evt) {
+            }
+        });
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 440, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Sitka Text", 2, 14)); // NOI18N
         jLabel5.setText("StreetAttire.Co");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 460, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/icons8-facebook-50.png"))); // NOI18N
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 440, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Sitka Text", 2, 14)); // NOI18N
         jLabel8.setText("@StreetAttireCo");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/icons8-store-50.png"))); // NOI18N
-        jLabel10.setText("Jl.Cempaka Putih II no 14, Jakarta Pusat.");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 440, -1, -1));
+        jLabel10.setText("Jl.Cempaka Putih Tengah XII No.3, Jakarta Pusat.");
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel10MouseEntered(evt);
+            }
+        });
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 440, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -345,9 +446,7 @@ public class TampilanBelanja extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 6, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 518, Short.MAX_VALUE)
         );
 
         pack();
@@ -368,6 +467,66 @@ public class TampilanBelanja extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jLabel6AncestorMoved(java.awt.event.HierarchyEvent evt) {//GEN-FIRST:event_jLabel6AncestorMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel6AncestorMoved
+
+    private void jLabel10MouseEntered(java.awt.event.MouseEvent evt) {                                     
+        // TODO add your handling code here:
+        evt.consume();
+    }                               
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        // TODO add your handling code here:
+        try {
+           URI instagramURI = new URI("https://www.instagram.com/streetattireco/");
+           Desktop.getDesktop().browse(instagramURI);
+       }catch (Exception e) {
+           e.printStackTrace();
+       }
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        // TODO add your handling code here:
+        try {
+           URI instagramURI = new URI("https://www.instagram.com/streetattireco/");
+           Desktop.getDesktop().browse(instagramURI);
+       }catch (Exception e) {
+           e.printStackTrace();
+       }
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        // TODO add your handling code here:
+        try {
+           URI instagramURI = new URI
+           ("https://www.google.com/maps/place/RS+Islam/@-6.1721289,106.8700641,3a,75y,84.28h,92.58t/data=!3m6!1e1!3m4!1sMnC4Y4jtZGMVp2EPc0fngw!2e0!7i16384!8i8192!4m9!3m8!1s0x2e69f506a2654c9f:0xa6ea1cd2214bf8dc!8m2!3d-6.1686384!4d106.8703507!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F1q5k0l52m?entry=ttu");
+           Desktop.getDesktop().browse(instagramURI);
+       }catch (Exception e) {
+           e.printStackTrace();
+       }
+    }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+        try {
+           URI instagramURI = new URI("https://www.facebook.com/profile.php?id=100093209700093");
+           Desktop.getDesktop().browse(instagramURI);
+       }catch (Exception e) {
+           e.printStackTrace();
+       }
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        // TODO add your handling code here:
+        try {
+           URI instagramURI = new URI("https://www.facebook.com/profile.php?id=100093209700093");
+           Desktop.getDesktop().browse(instagramURI);
+       }catch (Exception e) {
+           e.printStackTrace();
+       }
+    }//GEN-LAST:event_jLabel7MouseClicked
 
     /**
      * @param args the command line arguments
@@ -408,13 +567,25 @@ public class TampilanBelanja extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
