@@ -1,3 +1,6 @@
+
+import javax.swing.plaf.basic.BasicInternalFrameUI;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
@@ -14,6 +17,9 @@ public class SepatuAdidas extends javax.swing.JInternalFrame {
      */
     public SepatuAdidas() {
         initComponents();
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        BasicInternalFrameUI bIF = (BasicInternalFrameUI)this.getUI();
+        bIF.setNorthPane(null);
     }
 
     /**

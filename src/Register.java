@@ -202,7 +202,24 @@ public class Register extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    public String getUsername() {
+        return usernameText.getText();
+    }
+    public void setUsername(String username) {
+        usernameText.setText(username);
+    }
+    public String getPaassword () {
+        return passwordText.getText();
+    }
+    public void setPassword(String password) {
+        passwordText.setText(password);
+    }
+    public String getRePassword () {
+        return rePasswordText.getText();
+    }
+    public void setRePassword(String rePass) {
+        rePasswordText.setText(rePass);
+    }
     private void rePasswordTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rePasswordTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rePasswordTextActionPerformed
@@ -230,7 +247,7 @@ public class Register extends javax.swing.JFrame {
 
                 }else {
                     Login lg = new Login();
-                    String insert = "insert into data values ('" + username + "', '" + password + "')";
+                    String insert = "insert into data values (default, '" + username + "', '" + password + "', '', '')";
                     st.executeUpdate(insert);
                     JOptionPane.showMessageDialog(null, "Berhasil Registrasi", "Informasi", JOptionPane.INFORMATION_MESSAGE);
                     this.dispose();

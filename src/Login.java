@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  * @author umam, rafly, kiki
  */
 public class Login extends javax.swing.JFrame {
-
+    String id;
     /**
      * Creates new form Login
      */
@@ -41,8 +41,8 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        username = new javax.swing.JTextField();
+        pass = new javax.swing.JPasswordField();
         loginButton = new javax.swing.JButton();
         jCheckBox1 = new javax.swing.JCheckBox();
         jLabel4 = new javax.swing.JLabel();
@@ -65,9 +65,9 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
         jLabel3.setText("Password");
 
-        jTextField1.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        username.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
 
-        jPasswordField1.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        pass.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
 
         loginButton.setBackground(new java.awt.Color(138, 170, 165));
         loginButton.setText("LOGIN");
@@ -103,8 +103,8 @@ public class Login extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jCheckBox1)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
-                                .addComponent(jTextField1)
+                                .addComponent(pass, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                                .addComponent(username)
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -120,11 +120,11 @@ public class Login extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pass, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jCheckBox1)
                 .addGap(18, 18, 18)
@@ -171,21 +171,33 @@ public class Login extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+    public String getUsername () {
+        return username.getText();
+    }
+    public String getPass () {
+        return pass.getText();
+    }
+    public void setUsername (String name) {
+        username.setText(name);
+    }
+    public void setPass (String password) {
+        pass.setText(password);
+    }
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
         
-        if (!jTextField1.getText().isEmpty() && !jPasswordField1.getText().isEmpty()) {
+        if (!username.getText().isEmpty() && !pass.getText().isEmpty()) {
             try {
             String query = "SELECT * FROM data WHERE username = ? AND password = ?";
             PreparedStatement ps = cn.prepareStatement(query);
-            ps.setString(1, jTextField1.getText());
-            ps.setString(2, jPasswordField1.getText());
+            ps.setString(1, username.getText());
+            ps.setString(2, pass.getText());
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                JOptionPane.showMessageDialog(null, "Halo, " + jTextField1.getText(), "Message", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Halo, " + username.getText(), "Message", JOptionPane.INFORMATION_MESSAGE);
                 this.dispose();
-                TampilanBelanja tj = new TampilanBelanja();
+                TampilanBelanja tj = new TampilanBelanja(rs.getString("username"), rs.getString("id"));
                 tj.setVisible(true);
                 this.dispose();
             } else {
@@ -194,13 +206,13 @@ public class Login extends javax.swing.JFrame {
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, e);
             }
-        }else if (jTextField1.getText().isEmpty() && jPasswordField1.getText().isEmpty()){
+        }else if (username.getText().isEmpty() && pass.getText().isEmpty()){
             JOptionPane.showMessageDialog(null, "Isi data mu!", "Warning", JOptionPane.ERROR_MESSAGE);
 
-        }else if (jTextField1.getText().isEmpty()) {
+        }else if (username.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Username belum diisi", "Informasi", JOptionPane.INFORMATION_MESSAGE);
 
-        }else if(jPasswordField1.getText().isEmpty()) {
+        }else if(pass.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Password belum diisi", "Informasi", JOptionPane.INFORMATION_MESSAGE);
 
         }
@@ -211,10 +223,10 @@ public class Login extends javax.swing.JFrame {
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
         if(jCheckBox1.isSelected()) {
-            jPasswordField1.setEchoChar((char)0);
+            pass.setEchoChar((char)0);
            
         }else {
-            jPasswordField1.setEchoChar('*');
+            pass.setEchoChar('*');
         }
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
@@ -261,8 +273,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JButton loginButton;
+    private javax.swing.JPasswordField pass;
+    private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
 }
