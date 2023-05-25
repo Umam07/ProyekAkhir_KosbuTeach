@@ -23,7 +23,7 @@ public class TampilanBelanja extends javax.swing.JFrame {
      * Creates new form TampilanBelanja
      */
     
-    
+   
     public TampilanBelanja() {
         initComponents();
         String x = "";
@@ -89,6 +89,11 @@ public class TampilanBelanja extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Monotype Corsiva", 0, 48)); // NOI18N
         jLabel1.setText("StreetAttire Co");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
 
         namaUSer.setFont(new java.awt.Font("Sitka Text", 0, 16)); // NOI18N
         namaUSer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -215,6 +220,11 @@ public class TampilanBelanja extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/Kaos2.jpg"))); // NOI18N
+        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel13MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -232,6 +242,11 @@ public class TampilanBelanja extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/Kaos1.png"))); // NOI18N
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -249,6 +264,11 @@ public class TampilanBelanja extends javax.swing.JFrame {
         jPanel8.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/actionFigure.png"))); // NOI18N
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -266,6 +286,11 @@ public class TampilanBelanja extends javax.swing.JFrame {
         jPanel9.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/Sepatu1.png"))); // NOI18N
+        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel12MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -283,6 +308,11 @@ public class TampilanBelanja extends javax.swing.JFrame {
         jPanel10.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/jam.jpg"))); // NOI18N
+        jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel16MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -304,6 +334,11 @@ public class TampilanBelanja extends javax.swing.JFrame {
         jPanel12.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/tas.png"))); // NOI18N
+        jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel17MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -325,6 +360,11 @@ public class TampilanBelanja extends javax.swing.JFrame {
         jPanel13.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/Kaos3.jpg"))); // NOI18N
+        jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel15MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -346,6 +386,11 @@ public class TampilanBelanja extends javax.swing.JFrame {
         jPanel14.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/Sepatu2.png"))); // NOI18N
+        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel14MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -527,6 +572,80 @@ public class TampilanBelanja extends javax.swing.JFrame {
            e.printStackTrace();
        }
     }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+         try {
+           URI instagramURI = new URI("https://www.instagram.com/streetattireco/");
+           Desktop.getDesktop().browse(instagramURI);
+       }catch (Exception e) {
+           e.printStackTrace();
+       }
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        // TODO add your handling code here:
+        jPanel11.removeAll();
+        TampilanBaju1 tampilBelanja = new TampilanBaju1();
+        tampilBelanja.setVisible(true);
+        jPanel11.add(tampilBelanja);
+    }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        // TODO add your handling code here:
+        jPanel11.removeAll();
+        SukunaFigure tampilBelanja = new SukunaFigure();
+        tampilBelanja.setVisible(true);
+        jPanel11.add(tampilBelanja);
+    }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
+        // TODO add your handling code here:
+        jPanel11.removeAll();
+        SepatuPutih tampilBelanja = new SepatuPutih();
+        tampilBelanja.setVisible(true);
+        jPanel11.add(tampilBelanja);
+    }//GEN-LAST:event_jLabel12MouseClicked
+
+    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
+        // TODO add your handling code here:
+        jPanel11.removeAll();
+        BajuAnya tampilBelanja = new BajuAnya();
+        tampilBelanja.setVisible(true);
+        jPanel11.add(tampilBelanja);
+    }//GEN-LAST:event_jLabel13MouseClicked
+
+    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+        // TODO add your handling code here:
+        jPanel11.removeAll();
+        SepatuAdidas tampilBelanja = new SepatuAdidas();
+        tampilBelanja.setVisible(true);
+        jPanel11.add(tampilBelanja);
+    }//GEN-LAST:event_jLabel14MouseClicked
+
+    private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
+        // TODO add your handling code here:
+        jPanel11.removeAll();
+        BajuAcmeDeLavie tampilBelanja = new BajuAcmeDeLavie();
+        tampilBelanja.setVisible(true);
+        jPanel11.add(tampilBelanja);
+    }//GEN-LAST:event_jLabel15MouseClicked
+
+    private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
+        // TODO add your handling code here:
+        jPanel11.removeAll();
+        TasTentengMewah tampilBelanja = new TasTentengMewah();
+        tampilBelanja.setVisible(true);
+        jPanel11.add(tampilBelanja);
+    }//GEN-LAST:event_jLabel17MouseClicked
+
+    private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
+        // TODO add your handling code here:
+        jPanel11.removeAll();
+        JamTanganRolex tampilBelanja = new JamTanganRolex();
+        tampilBelanja.setVisible(true);
+        jPanel11.add(tampilBelanja);
+    }//GEN-LAST:event_jLabel16MouseClicked
 
     /**
      * @param args the command line arguments
