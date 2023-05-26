@@ -32,7 +32,6 @@ public class TampilanBelanja extends javax.swing.JFrame {
    
     public TampilanBelanja() {
         initComponents();
-        String x = "";
     }
     public TampilanBelanja(String username, String id) {
         initComponents();    
@@ -411,7 +410,7 @@ public class TampilanBelanja extends javax.swing.JFrame {
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         // TODO add your handling code here:
         tampilanUtama.removeAll();
-        Produk p = new Produk();
+        Produk p = new Produk(id);
         tampilanUtama.add(p).setVisible(true);
     }//GEN-LAST:event_jLabel3MouseClicked
 

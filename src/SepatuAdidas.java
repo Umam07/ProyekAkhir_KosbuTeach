@@ -1,4 +1,8 @@
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 /*
@@ -11,7 +15,12 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  * @author muham
  */
 public class SepatuAdidas extends javax.swing.JInternalFrame {
-
+    Connection con = koneksiDatabase.BukaKoneksi();
+    ResultSet rs;
+    Statement stm;
+    String id;
+    String namaProduk;
+    int hargaB;
     /**
      * Creates new form SepatuAdidas
      */
@@ -20,8 +29,14 @@ public class SepatuAdidas extends javax.swing.JInternalFrame {
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         BasicInternalFrameUI bIF = (BasicInternalFrameUI)this.getUI();
         bIF.setNorthPane(null);
-    }
-
+    }  
+    public SepatuAdidas(String id) {
+        initComponents();
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        BasicInternalFrameUI bIF = (BasicInternalFrameUI)this.getUI();
+        bIF.setNorthPane(null);
+        this.id = id;
+    }  
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,7 +49,7 @@ public class SepatuAdidas extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        namaBarang = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -64,9 +79,9 @@ public class SepatuAdidas extends javax.swing.JInternalFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
-        jLabel2.setText("Sepatu Speedy 15");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, -1, 32));
+        namaBarang.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
+        namaBarang.setText("Sepatu Speedy 15");
+        jPanel1.add(namaBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, -1, 32));
 
         jLabel18.setFont(new java.awt.Font("Sitka Text", 1, 18)); // NOI18N
         jLabel18.setText("Rp. 300.000");
@@ -116,6 +131,18 @@ public class SepatuAdidas extends javax.swing.JInternalFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        try {
+        stm = con.createStatement();
+        rs = stm.executeQuery("select * from produk where produk = '" + namaBarang.getText() + "'");
+            if (rs.next()) {
+            this.namaProduk = rs.getString("produk");
+            this.hargaB = rs.getInt("harga");
+            Pembayaran p = new Pembayaran(id, namaProduk, hargaB);
+            p.setVisible(true);
+            }
+        } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, e);      
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
@@ -130,11 +157,11 @@ public class SepatuAdidas extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel namaBarang;
     // End of variables declaration//GEN-END:variables
 }

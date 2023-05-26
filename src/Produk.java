@@ -11,7 +11,7 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  * @author RAFLY
  */
 public class Produk extends javax.swing.JInternalFrame {
-
+    String id;
     /**
      * Creates new form Produk
      */
@@ -20,6 +20,13 @@ public class Produk extends javax.swing.JInternalFrame {
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         BasicInternalFrameUI bIF = (BasicInternalFrameUI)this.getUI();
         bIF.setNorthPane(null);
+    }
+    public Produk(String id) {
+        initComponents();
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        BasicInternalFrameUI bIF = (BasicInternalFrameUI)this.getUI();
+        bIF.setNorthPane(null);
+        this.id = id;
     }
 
     /**
@@ -55,6 +62,8 @@ public class Produk extends javax.swing.JInternalFrame {
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1100, 500));
 
@@ -257,8 +266,8 @@ public class Produk extends javax.swing.JInternalFrame {
         jPanel18.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 140, 150));
 
         jLabel18.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
-        jLabel18.setText("Harga : Rp. 1.500.000");
-        jPanel18.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 420, 150, 20));
+        jLabel18.setText("Harga : Rp. 5.000.000");
+        jPanel18.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 420, 150, 20));
 
         jLabel19.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
         jLabel19.setText("Harga : Rp. 450.000");
@@ -280,13 +289,21 @@ public class Produk extends javax.swing.JInternalFrame {
         jLabel23.setText("Harga : Rp. 1.500.000");
         jPanel18.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 150, 20));
 
+        jLabel24.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel24.setText("Harga : Rp. 1.500.000");
+        jPanel18.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, 150, 20));
+
+        jLabel28.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel28.setText("Harga : Rp. 2.000.000");
+        jPanel18.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 420, 150, 20));
+
         tampilanProduk.setLayer(jPanel18, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout tampilanProdukLayout = new javax.swing.GroupLayout(tampilanProduk);
         tampilanProduk.setLayout(tampilanProdukLayout);
         tampilanProdukLayout.setHorizontalGroup(
             tampilanProdukLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1100, Short.MAX_VALUE)
+            .addGap(0, 1106, Short.MAX_VALUE)
             .addGroup(tampilanProdukLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(tampilanProdukLayout.createSequentialGroup()
                     .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, 1106, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -304,16 +321,16 @@ public class Produk extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 6, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(tampilanProduk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 6, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 6, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(tampilanProduk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 6, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -321,10 +338,10 @@ public class Produk extends javax.swing.JInternalFrame {
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
         // TODO add your handling code here:
-        jPanel11.removeAll();
+        tampilanProduk.removeAll();
         BajuAnya tampilBelanja = new BajuAnya();
         tampilBelanja.setVisible(true);
-        jPanel11.add(tampilBelanja);
+        tampilanProduk.add(tampilBelanja);
     }//GEN-LAST:event_jLabel13MouseClicked
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
@@ -337,42 +354,42 @@ public class Produk extends javax.swing.JInternalFrame {
 
     private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
         // TODO add your handling code here:
-        jPanel11.removeAll();
+        tampilanProduk.removeAll();
         TasTentengMewah tampilBelanja = new TasTentengMewah();
         tampilBelanja.setVisible(true);
-        jPanel11.add(tampilBelanja);
+        tampilanProduk.add(tampilBelanja);
     }//GEN-LAST:event_jLabel17MouseClicked
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
         // TODO add your handling code here:
-        jPanel11.removeAll();
+        tampilanProduk.removeAll();
         SepatuPutih tampilBelanja = new SepatuPutih();
         tampilBelanja.setVisible(true);
-        jPanel11.add(tampilBelanja);
+        tampilanProduk.add(tampilBelanja);
     }//GEN-LAST:event_jLabel12MouseClicked
 
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
         // TODO add your handling code here:
         tampilanProduk.removeAll();
-        SukunaFigure tampilBelanja = new SukunaFigure();
+        SukunaFigure tampilBelanja = new SukunaFigure(id);
         tampilBelanja.setVisible(true);
         tampilanProduk.add(tampilBelanja);
     }//GEN-LAST:event_jLabel11MouseClicked
 
     private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
         // TODO add your handling code here:
-        jPanel11.removeAll();
+        tampilanProduk.removeAll();
         BajuAcmeDeLavie tampilBelanja = new BajuAcmeDeLavie();
         tampilBelanja.setVisible(true);
-        jPanel11.add(tampilBelanja);
+        tampilanProduk.add(tampilBelanja);
     }//GEN-LAST:event_jLabel15MouseClicked
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
         // TODO add your handling code here:
-        jPanel11.removeAll();
+        tampilanProduk.removeAll();
         SepatuAdidas tampilBelanja = new SepatuAdidas();
         tampilBelanja.setVisible(true);
-        jPanel11.add(tampilBelanja);
+        tampilanProduk.add(tampilBelanja);
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
@@ -387,7 +404,6 @@ public class Produk extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -398,19 +414,16 @@ public class Produk extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
