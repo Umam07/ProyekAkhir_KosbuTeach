@@ -395,7 +395,7 @@ public class Produk extends javax.swing.JInternalFrame {
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         // TODO add your handling code here:
         tampilanProduk.removeAll();
-        TampilanBaju1 tampilBelanja = new TampilanBaju1();
+        BajuPower tampilBelanja = new BajuPower();
         tampilBelanja.setVisible(true);
         tampilanProduk.add(tampilBelanja);
     }//GEN-LAST:event_jLabel9MouseClicked

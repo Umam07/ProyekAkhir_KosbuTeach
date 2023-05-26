@@ -1,4 +1,8 @@
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 /*
@@ -10,20 +14,27 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  *
  * @author muham
  */
-public class TampilanBaju1 extends javax.swing.JInternalFrame {
-
-    /**
-     * Creates new form TampilanBaju1
-     */
-   
-    
-    
-    public TampilanBaju1() {
+public class BajuPower extends javax.swing.JInternalFrame {
+Connection con = koneksiDatabase.BukaKoneksi();
+    ResultSet rs;
+    Statement stm;
+    String id;
+    String namaProduk;
+    int hargaB;
+    public BajuPower() {
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         BasicInternalFrameUI bIF = (BasicInternalFrameUI)this.getUI();
         bIF.setNorthPane(null);
     }
+    
+    public BajuPower(String id) {
+        initComponents();
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        BasicInternalFrameUI bIF = (BasicInternalFrameUI)this.getUI();
+        bIF.setNorthPane(null);
+        this.id = id;
+    }  
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -38,7 +49,7 @@ public class TampilanBaju1 extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        namaBarang = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -46,18 +57,11 @@ public class TampilanBaju1 extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(207, 219, 218));
-        setTitle("Detail Produk");
-        setMinimumSize(new java.awt.Dimension(960, 400));
         setPreferredSize(new java.awt.Dimension(1100, 500));
-
-        jDesktopPane1.setPreferredSize(new java.awt.Dimension(1100, 500));
 
         jPanel1.setBackground(new java.awt.Color(207, 219, 218));
         jPanel1.setMinimumSize(new java.awt.Dimension(1070, 420));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/kaos1(rezise besar).png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -76,9 +80,9 @@ public class TampilanBaju1 extends javax.swing.JInternalFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
-        jLabel2.setText("Baju Anime Power");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, -1, 32));
+        namaBarang.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
+        namaBarang.setText("Baju Anime Power");
+        jPanel1.add(namaBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, -1, 32));
 
         jLabel18.setFont(new java.awt.Font("Sitka Text", 1, 18)); // NOI18N
         jLabel18.setText("Rp. 300.000");
@@ -119,31 +123,26 @@ public class TampilanBaju1 extends javax.swing.JInternalFrame {
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1134, Short.MAX_VALUE)
+            .addGap(0, 1088, Short.MAX_VALUE)
             .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE)))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1088, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGap(0, 464, Short.MAX_VALUE)
             .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 472, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1132, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jDesktopPane1)
         );
 
         pack();
@@ -151,14 +150,27 @@ public class TampilanBaju1 extends javax.swing.JInternalFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+         try {
+        stm = con.createStatement();
+        rs = stm.executeQuery("select * from produk where produk = '" + namaBarang.getText() + "'");
+            if (rs.next()) {
+            this.namaProduk = rs.getString("produk");
+            this.hargaB = rs.getInt("harga");
+            Pembayaran p = new Pembayaran(id, namaProduk, hargaB);
+            p.setVisible(true);
+            }
+        } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, e);      
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
-       this.setVisible(false);  
-       TampilanBelanja tampilanBelanja = new TampilanBelanja(); 
-       tampilanBelanja.setVisible(true); 
-       
+        jDesktopPane1.removeAll();
+        Produk tampilanBelanja = new Produk();
+        tampilanBelanja.setVisible(true);
+        jDesktopPane1.add(tampilanBelanja);
+
     }//GEN-LAST:event_jLabel5MouseClicked
 
 
@@ -167,12 +179,12 @@ public class TampilanBaju1 extends javax.swing.JInternalFrame {
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel namaBarang;
     // End of variables declaration//GEN-END:variables
 }
