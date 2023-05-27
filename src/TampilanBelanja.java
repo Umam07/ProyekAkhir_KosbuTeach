@@ -1,5 +1,6 @@
 
 import java.awt.Desktop;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import static java.lang.System.err;
 import java.net.URI;
@@ -63,7 +64,7 @@ public class TampilanBelanja extends javax.swing.JFrame implements statusPengiri
         namaUser = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        search = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -123,9 +124,20 @@ public class TampilanBelanja extends javax.swing.JFrame implements statusPengiri
         });
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/icons8-search-26.png"))); // NOI18N
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
+            }
+        });
+
+        search.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                searchKeyPressed(evt);
             }
         });
 
@@ -136,7 +148,7 @@ public class TampilanBelanja extends javax.swing.JFrame implements statusPengiri
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addGap(146, 146, 146)
@@ -150,7 +162,7 @@ public class TampilanBelanja extends javax.swing.JFrame implements statusPengiri
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -507,6 +519,110 @@ public class TampilanBelanja extends javax.swing.JFrame implements statusPengiri
         tampilanUtama.add(sB).setVisible(true);
     }//GEN-LAST:event_jLabel9MouseClicked
 
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+             if (search.getText().equalsIgnoreCase("Profile")) {
+             try {
+            st = cn.createStatement();
+            //rs = st.executeQuery("select * from data where id = '" + ID.getText() + "'" );
+            tampilanUtama.removeAll();
+            Profile p = new Profile(id);
+            tampilanUtama.add(p).setVisible(true);
+        }
+        catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }     
+        }else if(search.getText().equalsIgnoreCase("Cart")) {
+            tampilanUtama.removeAll();
+            Produk p = new Produk(id);
+            tampilanUtama.add(p).setVisible(true);
+        }else if (search.getText().equalsIgnoreCase("Item status") || search.getText().equalsIgnoreCase("ItemStatus")) {
+            tampilanUtama.removeAll();
+            StatusBarang sB = new StatusBarang(id, random());
+            tampilanUtama.add(sB).setVisible(true);
+        }else if(search.getText().equalsIgnoreCase("Instagram") || search.getText().equalsIgnoreCase("ig")) {
+            try {
+           URI instagramURI = new URI("https://www.instagram.com/streetattireco/");
+           Desktop.getDesktop().browse(instagramURI);
+       }catch (Exception e) {
+           e.printStackTrace();
+       }
+       }else if (search.getText().equalsIgnoreCase("Facebook") || search.getText().equalsIgnoreCase("fb")) {
+           try {
+           URI instagramURI = new URI("https://www.facebook.com/profile.php?id=100093209700093");
+           Desktop.getDesktop().browse(instagramURI);
+       }catch (Exception e) {
+           e.printStackTrace();
+       }
+       }else if (search.getText().equalsIgnoreCase("Logout") || search.getText().equalsIgnoreCase("out")) {
+           int x = JOptionPane.showConfirmDialog(this, "Apakah kamu yakin ingin Logout?","Logout", JOptionPane.YES_NO_OPTION);
+            if (x == 0) {
+                Login lg = new Login();
+                lg.setVisible(true);
+                this.dispose();
+            }
+       }
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void searchKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchKeyPressed
+        // TODO add your handling code here:
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER) {
+               if (search.getText().equalsIgnoreCase("Profile")) {
+             try {
+            st = cn.createStatement();
+            //rs = st.executeQuery("select * from data where id = '" + ID.getText() + "'" );
+            tampilanUtama.removeAll();
+            Profile p = new Profile(id);
+            tampilanUtama.add(p).setVisible(true);
+        }
+        catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }     
+        }else if(search.getText().equalsIgnoreCase("Cart")) {
+            tampilanUtama.removeAll();
+            Produk p = new Produk(id);
+            tampilanUtama.add(p).setVisible(true);
+        }else if (search.getText().equalsIgnoreCase("Item status") || search.getText().equalsIgnoreCase("ItemStatus")
+                || search.getText().equalsIgnoreCase("Item") || search.getText().equalsIgnoreCase("Status")) {
+            tampilanUtama.removeAll();
+            StatusBarang sB = new StatusBarang(id, random());
+            tampilanUtama.add(sB).setVisible(true);
+        }else if(search.getText().equalsIgnoreCase("Instagram") || search.getText().equalsIgnoreCase("ig")) {
+            try {
+           URI instagramURI = new URI("https://www.instagram.com/streetattireco/");
+           Desktop.getDesktop().browse(instagramURI);
+       }catch (Exception e) {
+           e.printStackTrace();
+       }
+       }else if (search.getText().equalsIgnoreCase("Facebook") || search.getText().equalsIgnoreCase("fb")) {
+           try {
+           URI instagramURI = new URI("https://www.facebook.com/profile.php?id=100093209700093");
+           Desktop.getDesktop().browse(instagramURI);
+       }catch (Exception e) {
+           e.printStackTrace();
+       }
+       }else if (search.getText().equalsIgnoreCase("Logout") || search.getText().equalsIgnoreCase("out")) {
+           int x = JOptionPane.showConfirmDialog(this, "Apakah kamu yakin ingin Logout?","Logout", JOptionPane.YES_NO_OPTION);
+            if (x == 0) {
+                Login lg = new Login();
+                lg.setVisible(true);
+                this.dispose();
+            }
+       }else if (search.getText().equalsIgnoreCase("CempakaPutih") || search.getText().equalsIgnoreCase("Cempaka Putih") || search.getText().equalsIgnoreCase("Alamat Toko")
+               || search.getText().equalsIgnoreCase("Letak Toko" ) || search.getText().equalsIgnoreCase("Toko") || search.getText().equalsIgnoreCase("Map Toko") || search.getText().equalsIgnoreCase("Map")
+               || search.getText().equalsIgnoreCase("Google Maps") || search.getText().equalsIgnoreCase("Tempat") || search.getText().equalsIgnoreCase("Jl.Cempaka Putih Tengah XII No.3, Jakarta Pusat.")
+               || search.getText().equalsIgnoreCase("Jalan")) {
+           try {
+           URI instagramURI = new URI
+           ("https://www.google.com/maps/place/RS+Islam/@-6.1721289,106.8700641,3a,75y,84.28h,92.58t/data=!3m6!1e1!3m4!1sMnC4Y4jtZGMVp2EPc0fngw!2e0!7i16384!8i8192!4m9!3m8!1s0x2e69f506a2654c9f:0xa6ea1cd2214bf8dc!8m2!3d-6.1686384!4d106.8703507!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F1q5k0l52m?entry=ttu");
+           Desktop.getDesktop().browse(instagramURI);
+       }catch (Exception e) {
+           e.printStackTrace();
+       }
+       }
+    }
+    }//GEN-LAST:event_searchKeyPressed
+
     /**
      * @param args the command line arguments
      */
@@ -564,8 +680,8 @@ public class TampilanBelanja extends javax.swing.JFrame implements statusPengiri
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel namaUser;
+    private javax.swing.JTextField search;
     private javax.swing.JDesktopPane tampilanUtama;
     // End of variables declaration//GEN-END:variables
 }
