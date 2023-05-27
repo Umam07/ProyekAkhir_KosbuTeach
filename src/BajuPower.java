@@ -99,6 +99,11 @@ Connection con = koneksiDatabase.BukaKoneksi();
         jButton2.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
         jButton2.setText("Beli");
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -172,6 +177,11 @@ Connection con = koneksiDatabase.BukaKoneksi();
         jDesktopPane1.add(tampilanBelanja);
 
     }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+       evt.consume();
+    }//GEN-LAST:event_jButton2MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

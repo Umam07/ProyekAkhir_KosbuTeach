@@ -37,7 +37,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9a" green="bd" red="ca" type="rgb"/>
+          <Color blue="da" green="db" red="cf" type="rgb"/>
         </Property>
       </Properties>
 
@@ -73,12 +73,12 @@
         <Container class="javax.swing.JPanel" name="jPanel2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="da" green="db" red="cf" type="rgb"/>
+              <Color blue="da" green="e8" red="f6" type="rgb"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder thickness="3">
-                  <Color PropertyName="color" blue="a5" green="aa" red="8a" type="rgb"/>
+                  <Color PropertyName="color" blue="77" green="6c" red="4f" type="rgb"/>
                 </LineBorder>
               </Border>
             </Property>
@@ -209,7 +209,7 @@
             <Component class="javax.swing.JButton" name="registerButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="a5" green="aa" red="8a" type="rgb"/>
+                  <Color blue="77" green="6c" red="4f" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Sitka Text" size="12" style="0"/>
@@ -238,7 +238,7 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Snap ITC" size="14" style="0"/>
+              <Font name="Sitka Text" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Sudah punya akun? Login disini"/>
           </Properties>

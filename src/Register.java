@@ -50,10 +50,10 @@ public class Register extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(202, 189, 154));
+        jPanel1.setBackground(new java.awt.Color(207, 219, 218));
 
-        jPanel2.setBackground(new java.awt.Color(207, 219, 218));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(138, 170, 165), 3));
+        jPanel2.setBackground(new java.awt.Color(246, 232, 218));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 108, 119), 3));
 
         jLabel1.setFont(new java.awt.Font("Sitka Text", 0, 24)); // NOI18N
         jLabel1.setText("REGISTER");
@@ -88,7 +88,7 @@ public class Register extends javax.swing.JFrame {
             }
         });
 
-        registerButton.setBackground(new java.awt.Color(138, 170, 165));
+        registerButton.setBackground(new java.awt.Color(79, 108, 119));
         registerButton.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
         registerButton.setText("REGISTER");
         registerButton.addActionListener(new java.awt.event.ActionListener() {
@@ -157,7 +157,7 @@ public class Register extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
         );
 
-        jLabel3.setFont(new java.awt.Font("Snap ITC", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
         jLabel3.setText("Sudah punya akun? Login disini");
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -247,7 +247,7 @@ public class Register extends javax.swing.JFrame {
 
                 }else {
                     Login lg = new Login();
-                    String insert = "insert into data values (default, '" + username + "', '" + password + "', '', '', '')";
+                    String insert = "insert into data values (default, '" + username + "', '" + password + "', '', '', '', '', '', '')";
                     st.executeUpdate(insert);
                     JOptionPane.showMessageDialog(null, "Berhasil Registrasi", "Informasi", JOptionPane.INFORMATION_MESSAGE);
                     this.dispose();

@@ -93,12 +93,12 @@ public class JamTanganRolex extends javax.swing.JInternalFrame {
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 140, 20));
 
         jLabel3.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
-        jLabel3.setText("T-shirt dari bahan 'Katun' yang terasa nyaman, dengan tampilan anime. Miliki");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 537, 30));
+        jLabel3.setText("Jam Tangan Rolex adalah ikon kemewahan dan presisi dalam dunia jam tangan. Dibuat dengan keahlian tinggi");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 740, 30));
 
         jLabel4.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
-        jLabel4.setText("untuk Pria maupun Wanita, dan kenakan saat mengikuti event.");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 530, 30));
+        jLabel4.setText("dan menggunakan bahan-bahan terbaik, jam tangan ini merupakan simbol status dan gaya yang tak tertandingi.");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 760, 30));
 
         jButton2.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
         jButton2.setText("Beli");

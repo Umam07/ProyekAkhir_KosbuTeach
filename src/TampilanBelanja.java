@@ -8,24 +8,27 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Random;
 import javax.swing.JOptionPane;
+import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
+interface statusPengiriman {
+    int random();
+}
 /**
  *
  * @author umam, rafly, kiki
  */
-public class TampilanBelanja extends javax.swing.JFrame {
+public class TampilanBelanja extends javax.swing.JFrame implements statusPengiriman {
     Connection cn = koneksiDatabase.BukaKoneksi();
     ResultSet rs;
     Statement st;
-    String nama, nomor, alamat, id;
-    /**
+    String nama, nomor, alamat, id;  /**
      * Creates new form TampilanBelanja
      */
     
@@ -39,6 +42,11 @@ public class TampilanBelanja extends javax.swing.JFrame {
         this.id = id;
         namaUser.setText(nama);
         ID.setText("ID : " + this.id);
+    }
+    public TampilanBelanja(String id) {
+        initComponents();
+        this.id = id;
+        
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -62,8 +70,12 @@ public class TampilanBelanja extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tampilanUtama = new javax.swing.JDesktopPane();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -79,10 +91,12 @@ public class TampilanBelanja extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(138, 170, 165));
+        jPanel1.setBackground(new java.awt.Color(246, 232, 218));
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setBackground(new java.awt.Color(138, 170, 165));
+        jPanel3.setBackground(new java.awt.Color(246, 232, 218));
+        jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel1.setFont(new java.awt.Font("Monotype Corsiva", 0, 48)); // NOI18N
         jLabel1.setText("StreetAttire Co");
@@ -121,7 +135,7 @@ public class TampilanBelanja extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 161, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
@@ -141,7 +155,7 @@ public class TampilanBelanja extends javax.swing.JFrame {
                         .addGap(15, 15, 15)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(0, 26, Short.MAX_VALUE)
+                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jButton1))
                             .addComponent(jLabel1))))
                 .addGap(16, 16, 16))
@@ -154,14 +168,15 @@ public class TampilanBelanja extends javax.swing.JFrame {
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1330, 90));
 
-        jPanel4.setBackground(new java.awt.Color(202, 189, 154));
+        jPanel4.setBackground(new java.awt.Color(158, 171, 179));
+        jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(165, 149, 109));
+        jPanel2.setBackground(new java.awt.Color(79, 108, 119));
 
         jLabel3.setFont(new java.awt.Font("Sitka Text", 0, 16)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/icons-buy.png"))); // NOI18N
-        jLabel3.setText("Shopping");
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/keranjang.png"))); // NOI18N
+        jLabel3.setText("Cart");
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel3MouseClicked(evt);
@@ -173,9 +188,9 @@ public class TampilanBelanja extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(65, 65, 65)
                 .addComponent(jLabel3)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,7 +199,7 @@ public class TampilanBelanja extends javax.swing.JFrame {
 
         jPanel4.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 230, 60));
 
-        jPanel5.setBackground(new java.awt.Color(165, 149, 109));
+        jPanel5.setBackground(new java.awt.Color(79, 108, 119));
 
         jLabel4.setFont(new java.awt.Font("Sitka Text", 0, 16)); // NOI18N
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/icons-settings.png"))); // NOI18N
@@ -202,7 +217,7 @@ public class TampilanBelanja extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(52, 52, 52)
                 .addComponent(jLabel4)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -214,20 +229,71 @@ public class TampilanBelanja extends javax.swing.JFrame {
         ID.setText("ID :");
         jPanel4.add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, -1, -1));
 
+        jPanel6.setBackground(new java.awt.Color(79, 108, 119));
+
+        jLabel9.setFont(new java.awt.Font("Sitka Text", 0, 16)); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/paket.png"))); // NOI18N
+        jLabel9.setText("Item Status");
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(39, Short.MAX_VALUE)
+                .addComponent(jLabel9)
+                .addGap(37, 37, 37))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel4.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 230, 60));
+
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 230, 510));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
+        tampilanUtama.setBackground(new java.awt.Color(234, 238, 239));
+
+        jLabel12.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
+        jLabel12.setText("SELAMAT DATANG DAN SELAMAT BERBELANJA DI");
+
+        jLabel11.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
+        jLabel11.setText("Street Attire Co");
+
+        tampilanUtama.setLayer(jLabel12, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        tampilanUtama.setLayer(jLabel11, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout tampilanUtamaLayout = new javax.swing.GroupLayout(tampilanUtama);
         tampilanUtama.setLayout(tampilanUtamaLayout);
         tampilanUtamaLayout.setHorizontalGroup(
             tampilanUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1100, Short.MAX_VALUE)
+            .addGroup(tampilanUtamaLayout.createSequentialGroup()
+                .addGroup(tampilanUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(tampilanUtamaLayout.createSequentialGroup()
+                        .addGap(303, 303, 303)
+                        .addComponent(jLabel12))
+                    .addGroup(tampilanUtamaLayout.createSequentialGroup()
+                        .addGap(469, 469, 469)
+                        .addComponent(jLabel11)))
+                .addContainerGap(754, Short.MAX_VALUE))
         );
         tampilanUtamaLayout.setVerticalGroup(
             tampilanUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(tampilanUtamaLayout.createSequentialGroup()
+                .addGap(137, 137, 137)
+                .addComponent(jLabel12)
+                .addGap(31, 31, 31)
+                .addComponent(jLabel11)
+                .addContainerGap(300, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(tampilanUtama);
@@ -318,7 +384,11 @@ public class TampilanBelanja extends javax.swing.JFrame {
         
 
     }//GEN-LAST:event_jLabel2MouseClicked
-
+    public int random() {
+    Random random = new Random();
+    int generatedNumber = random.nextInt(2);
+    return generatedNumber;
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -429,6 +499,13 @@ public class TampilanBelanja extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_formWindowOpened
+    
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        // TODO add your handling code here:
+        tampilanUtama.removeAll();
+        StatusBarang sB = new StatusBarang(id, random());
+        tampilanUtama.add(sB).setVisible(true);
+    }//GEN-LAST:event_jLabel9MouseClicked
 
     /**
      * @param args the command line arguments
@@ -470,6 +547,8 @@ public class TampilanBelanja extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -477,11 +556,13 @@ public class TampilanBelanja extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel namaUser;

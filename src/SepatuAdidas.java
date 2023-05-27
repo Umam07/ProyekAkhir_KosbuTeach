@@ -87,16 +87,16 @@ public class SepatuAdidas extends javax.swing.JInternalFrame {
         jPanel1.add(namaBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, -1, 32));
 
         jLabel18.setFont(new java.awt.Font("Sitka Text", 1, 18)); // NOI18N
-        jLabel18.setText("Rp. 300.000");
+        jLabel18.setText("Rp. 1.500.000");
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 140, 20));
 
         jLabel3.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
-        jLabel3.setText("T-shirt dari bahan 'Katun' yang terasa nyaman, dengan tampilan anime. Miliki");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 537, 30));
+        jLabel3.setText("Sepatu olahraga berkualitas tinggi dengan desain modern dan nyaman digunakan. Terbuat dari");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 640, 30));
 
         jLabel4.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
-        jLabel4.setText("untuk Pria maupun Wanita, dan kenakan saat mengikuti event.");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 530, 30));
+        jLabel4.setText("bahan berkualitas yang tahan lama. Cocok untuk berbagai aktivitas olahraga dan sehari-hari.");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 630, 30));
 
         jButton2.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
         jButton2.setText("Beli");

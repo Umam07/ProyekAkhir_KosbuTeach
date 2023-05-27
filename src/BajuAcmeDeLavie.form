@@ -136,7 +136,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Sitka Text" size="18" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Rp. 300.000"/>
+                <Property name="text" type="java.lang.String" value="Rp. 1.500.000"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -149,11 +149,11 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Sitka Text" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="T-shirt dari bahan &apos;Katun&apos; yang terasa nyaman, dengan tampilan anime. Miliki"/>
+                <Property name="text" type="java.lang.String" value="Baju Acme De Lavie adalah sebuah karya fashion yang menggabungkan gaya dan kenyamanan untuk tampilan yang"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="290" y="130" width="537" height="30"/>
+                  <AbsoluteConstraints x="290" y="130" width="790" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -162,11 +162,11 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Sitka Text" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="untuk Pria maupun Wanita, dan kenakan saat mengikuti event."/>
+                <Property name="text" type="java.lang.String" value="baju ini akan memberikan Anda penampilan yang memikat dalam setiap kesempatan.  "/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="290" y="150" width="530" height="30"/>
+                  <AbsoluteConstraints x="290" y="170" width="580" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -199,6 +199,19 @@
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="50" y="380" width="50" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel6">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Sitka Text" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="menawan. Dibuat dengan perpaduan desain yang elegan dan bahan berkualitas tinggi,"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="290" y="150" width="580" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>

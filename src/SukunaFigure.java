@@ -57,6 +57,7 @@ public class SukunaFigure extends javax.swing.JInternalFrame {
         jLabel4 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         jDesktopPane1.setPreferredSize(new java.awt.Dimension(1100, 500));
 
@@ -88,16 +89,16 @@ public class SukunaFigure extends javax.swing.JInternalFrame {
         jPanel1.add(namaBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, -1, 32));
 
         jLabel18.setFont(new java.awt.Font("Sitka Text", 1, 18)); // NOI18N
-        jLabel18.setText("Rp. 300.000");
+        jLabel18.setText("Rp. 450.000");
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 140, 20));
 
         jLabel3.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
-        jLabel3.setText("T-shirt dari bahan 'Katun' yang terasa nyaman, dengan tampilan anime. Miliki");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 537, 30));
+        jLabel3.setText("Action Figure Sukuna adalah sebuah karya seni yang menakjubkan bagi para penggemar anime Jujutsu Kaisen. ");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 790, 30));
 
         jLabel4.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
-        jLabel4.setText("untuk Pria maupun Wanita, dan kenakan saat mengikuti event.");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 530, 30));
+        jLabel4.setText("dengan detail yang luar biasa dan akurat.");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, 540, 30));
 
         jButton2.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
         jButton2.setText("Beli");
@@ -116,6 +117,10 @@ public class SukunaFigure extends javax.swing.JInternalFrame {
             }
         });
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 50, 50));
+
+        jLabel6.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel6.setText("Action Figure ini menggambarkan karakter kuat dan legendaris, Ryomen Sukuna,");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 540, 30));
 
         jDesktopPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -185,6 +190,7 @@ public class SukunaFigure extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel namaBarang;

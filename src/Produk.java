@@ -64,6 +64,14 @@ public class Produk extends javax.swing.JInternalFrame {
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1100, 500));
 
@@ -241,6 +249,7 @@ public class Produk extends javax.swing.JInternalFrame {
 
         jPanel14.setBackground(new java.awt.Color(204, 204, 255));
 
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/Sepatu2.png"))); // NOI18N
         jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -265,37 +274,69 @@ public class Produk extends javax.swing.JInternalFrame {
 
         jPanel18.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 140, 150));
 
-        jLabel18.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
         jLabel18.setText("Harga : Rp. 5.000.000");
-        jPanel18.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 420, 150, 20));
+        jPanel18.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 430, 130, 20));
 
-        jLabel19.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
         jLabel19.setText("Harga : Rp. 450.000");
-        jPanel18.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 140, 20));
+        jPanel18.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, 120, 20));
 
-        jLabel20.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
         jLabel20.setText("Harga : Rp. 2.500.000");
-        jPanel18.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 180, -1, 20));
+        jPanel18.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, -1, 20));
 
-        jLabel21.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel21.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
         jLabel21.setText("Harga : Rp. 250.000");
-        jPanel18.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 180, 140, 20));
+        jPanel18.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 200, 120, 20));
 
-        jLabel22.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
         jLabel22.setText("Harga : Rp. 300.000");
-        jPanel18.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 140, 20));
+        jPanel18.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 120, 20));
 
-        jLabel23.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel23.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
         jLabel23.setText("Harga : Rp. 1.500.000");
-        jPanel18.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 150, 20));
+        jPanel18.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, 130, 20));
 
-        jLabel24.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel24.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
         jLabel24.setText("Harga : Rp. 1.500.000");
-        jPanel18.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, 150, 20));
+        jPanel18.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 430, 130, 20));
 
-        jLabel28.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel28.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
         jLabel28.setText("Harga : Rp. 2.000.000");
-        jPanel18.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 420, 150, 20));
+        jPanel18.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 430, 140, 20));
+
+        jLabel1.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel1.setText("Action Figure Sukuna");
+        jPanel18.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel2.setText("Baju Anime Power");
+        jPanel18.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel3.setText("Sepatu Nike Original");
+        jPanel18.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 180, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel4.setText("Baju Anime Anya");
+        jPanel18.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 180, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel5.setText("Sepatu Speedy 15");
+        jPanel18.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel6.setText("Baju AcmeDe Lavie");
+        jPanel18.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 410, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel7.setText("Tas Selempang Coach \t");
+        jPanel18.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 410, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel8.setText("Jam Tangan Rolex");
+        jPanel18.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 410, -1, -1));
 
         tampilanProduk.setLayer(jPanel18, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -313,7 +354,7 @@ public class Produk extends javax.swing.JInternalFrame {
             tampilanProdukLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 500, Short.MAX_VALUE)
             .addGroup(tampilanProdukLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -339,7 +380,7 @@ public class Produk extends javax.swing.JInternalFrame {
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
         // TODO add your handling code here:
         tampilanProduk.removeAll();
-        BajuAnya tampilBelanja = new BajuAnya();
+        BajuAnya tampilBelanja = new BajuAnya(id);
         tampilBelanja.setVisible(true);
         tampilanProduk.add(tampilBelanja);
     }//GEN-LAST:event_jLabel13MouseClicked
@@ -347,7 +388,7 @@ public class Produk extends javax.swing.JInternalFrame {
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
         // TODO add your handling code here:
         tampilanProduk.removeAll();
-        JamTanganRolex tampilBelanja = new JamTanganRolex();
+        JamTanganRolex tampilBelanja = new JamTanganRolex(id);
         tampilBelanja.setVisible(true);
         tampilanProduk.add(tampilBelanja);
     }//GEN-LAST:event_jLabel16MouseClicked
@@ -355,7 +396,7 @@ public class Produk extends javax.swing.JInternalFrame {
     private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
         // TODO add your handling code here:
         tampilanProduk.removeAll();
-        TasTentengMewah tampilBelanja = new TasTentengMewah();
+        TasTentengMewah tampilBelanja = new TasTentengMewah(id);
         tampilBelanja.setVisible(true);
         tampilanProduk.add(tampilBelanja);
     }//GEN-LAST:event_jLabel17MouseClicked
@@ -363,7 +404,7 @@ public class Produk extends javax.swing.JInternalFrame {
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
         // TODO add your handling code here:
         tampilanProduk.removeAll();
-        SepatuPutih tampilBelanja = new SepatuPutih();
+        SepatuPutih tampilBelanja = new SepatuPutih(id);
         tampilBelanja.setVisible(true);
         tampilanProduk.add(tampilBelanja);
     }//GEN-LAST:event_jLabel12MouseClicked
@@ -379,7 +420,7 @@ public class Produk extends javax.swing.JInternalFrame {
     private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
         // TODO add your handling code here:
         tampilanProduk.removeAll();
-        BajuAcmeDeLavie tampilBelanja = new BajuAcmeDeLavie();
+        BajuAcmeDeLavie tampilBelanja = new BajuAcmeDeLavie(id);
         tampilBelanja.setVisible(true);
         tampilanProduk.add(tampilBelanja);
     }//GEN-LAST:event_jLabel15MouseClicked
@@ -387,7 +428,7 @@ public class Produk extends javax.swing.JInternalFrame {
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
         // TODO add your handling code here:
         tampilanProduk.removeAll();
-        SepatuAdidas tampilBelanja = new SepatuAdidas();
+        SepatuAdidas tampilBelanja = new SepatuAdidas(id);
         tampilBelanja.setVisible(true);
         tampilanProduk.add(tampilBelanja);
     }//GEN-LAST:event_jLabel14MouseClicked
@@ -395,13 +436,14 @@ public class Produk extends javax.swing.JInternalFrame {
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         // TODO add your handling code here:
         tampilanProduk.removeAll();
-        BajuPower tampilBelanja = new BajuPower();
+        BajuPower tampilBelanja = new BajuPower(id);
         tampilBelanja.setVisible(true);
         tampilanProduk.add(tampilBelanja);
     }//GEN-LAST:event_jLabel9MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
@@ -410,6 +452,7 @@ public class Produk extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -417,6 +460,12 @@ public class Produk extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel12;
