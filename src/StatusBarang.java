@@ -57,6 +57,13 @@ public class StatusBarang extends javax.swing.JInternalFrame {
             jTextFieldHarga2.setText(kurensiIndonesia.format(this.jumlah));
             jTextFieldAlamat5.setText(rs.getString("alamat"));
             jTextFieldNomorTelepon4.setText(rs.getString("nomor_telepon"));
+            jTextFieldNamaPenerima3.setEditable(false);
+            jmetodePem6.setEditable(false);
+            jnamabarang1.setEditable(false);
+            jTextFieldHarga2.setEditable(false);
+            jTextFieldAlamat5.setEditable(false);
+            jTextFieldNomorTelepon4.setEditable(false);
+            statusPengiriman.setEditable(false);
             }
         } catch (Exception e) {
         JOptionPane.showConfirmDialog(null, e);       

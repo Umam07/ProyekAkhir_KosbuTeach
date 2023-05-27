@@ -471,7 +471,7 @@ public class Pembayaran extends javax.swing.JFrame implements hitungHarga{
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         int a = totalHarga() - voucher();
-        if (metodeP.getSelectedIndex() == 0) {
+        if (metodeP.getSelectedIndex() == 0 && isiVoucher.getText().equals(voucherr) && jumlahP.getText().length() > 0) {
             this.metodePembayaran = metodeP.getItemAt(0);
             try {
             stm = con.createStatement();
@@ -484,10 +484,33 @@ public class Pembayaran extends javax.swing.JFrame implements hitungHarga{
             JOptionPane.showMessageDialog(null, e);
             }
             
-        } else if (metodeP.getSelectedIndex() == 1) {
+        } else if (metodeP.getSelectedIndex() == 1 && isiVoucher.getText().equals(voucherr) && jumlahP.getText().length() > 0) {
             this.metodePembayaran = metodeP.getItemAt(1);
             try {
             JOptionPane.showMessageDialog(null, "Silahkan Lakukan Pembayaran Ke No Rek BCA \n 4545726376", "Pesan", JOptionPane.INFORMATION_MESSAGE);
+            TampilanBelanja sB = new TampilanBelanja(id);
+            this.dispose();
+            } 
+            catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+            }
+            
+        } else if (metodeP.getSelectedIndex() == 0 && jumlahP.getText().length() > 0) {
+            try {
+            stm = con.createStatement();
+            stm.executeUpdate("Update data set barang_dibeli = '" + namaBBarang  + "', total_harga = '" + totalHarga() + "', metode_pembayran = '" + metodePembayaran + "' where id = '" + id +"'" );          
+            JOptionPane.showMessageDialog(null, "Pembayaran Berhasil Silahkan Cek Menu Status Paket", "Pesan", JOptionPane.INFORMATION_MESSAGE);
+            TampilanBelanja sB = new TampilanBelanja(id);
+            this.dispose();
+            } 
+            catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+            }
+        } else if (metodeP.getSelectedIndex() == 1 && jumlahP.getText().length() > 0) {
+            try {
+            stm = con.createStatement();
+            stm.executeUpdate("Update data set barang_dibeli = '" + namaBBarang  + "', total_harga = '" + totalHarga() + "', metode_pembayran = '" + metodePembayaran + "' where id = '" + id +"'" );          
+            JOptionPane.showMessageDialog(null, "Pembayaran Berhasil Silahkan Cek Menu Status Paket", "Pesan", JOptionPane.INFORMATION_MESSAGE);
             TampilanBelanja sB = new TampilanBelanja(id);
             this.dispose();
             } 

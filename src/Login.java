@@ -134,11 +134,6 @@ public class Login extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Monotype Corsiva", 0, 48)); // NOI18N
         jLabel5.setText("StreetAttire Co");
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -178,19 +173,43 @@ public class Login extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+    /**
+     * method getUsername() untuk mengambil nilai username pada texfield
+     * 
+     * 
+     */
     public String getUsername () {
         return username.getText();
     }
+    /**
+     * method getPass() untuk mengambil nilai password pada texpasswordfield
+     * 
+     * 
+     */
     public String getPass () {
         return pass.getText();
     }
+    /**
+     * @param name untuk set username
+     * 
+     * 
+     */
     public void setUsername (String name) {
         username.setText(name);
     }
+    /**
+     * @param password untuk set password
+     * 
+     * 
+     */
     public void setPass (String password) {
         pass.setText(password);
     }
-
+    /**
+     * @method loginButtonActionPerformed untuk mengecek jika username dan password yang sudah terregister ke dalam basis data
+     *  Ketika di basis data terdeteksi maka user akan bisa login ke dalam dan menggunakan aplikasi ini
+     * 
+     */
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
         
@@ -226,7 +245,11 @@ public class Login extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_loginButtonActionPerformed
-
+    /**
+     * method jCheckBox1ActionPerformed untuk fitur melihat dan tidak melihat pada password
+     * 
+     * 
+     */
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
         if(jCheckBox1.isSelected()) {
@@ -236,10 +259,6 @@ public class Login extends javax.swing.JFrame {
             pass.setEchoChar('*');
         }
     }//GEN-LAST:event_jCheckBox1ActionPerformed
-
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel5MouseClicked
 
     /**
      * @param args the command line arguments
