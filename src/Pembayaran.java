@@ -487,6 +487,8 @@ public class Pembayaran extends javax.swing.JFrame implements hitungHarga{
         } else if (metodeP.getSelectedIndex() == 1 && isiVoucher.getText().equals(voucherr) && jumlahP.getText().length() > 0) {
             this.metodePembayaran = metodeP.getItemAt(1);
             try {
+            stm = con.createStatement();
+            stm.executeUpdate("Update data set barang_dibeli = '" + namaBBarang  + "', total_harga = '" + a + "', metode_pembayran = '" + metodePembayaran + "' where id = '" + id +"'" );         
             JOptionPane.showMessageDialog(null, "Silahkan Lakukan Pembayaran Ke No Rek BCA \n 4545726376", "Pesan", JOptionPane.INFORMATION_MESSAGE);
             TampilanBelanja sB = new TampilanBelanja(id);
             this.dispose();
