@@ -45,7 +45,7 @@ public class Profile extends javax.swing.JInternalFrame {
         id.setText(rs.getString("id"));
         nama.setText(rs.getString("username"));   
         alamat.setText(rs.getString("alamat"));
-        nomorT.setText(nomortelepon.substring(1, nomortelepon.length()));       
+        nomorT.setText(rs.getString("nomor_telepon"));       
         }
         
         }        
@@ -74,7 +74,7 @@ public class Profile extends javax.swing.JInternalFrame {
         stm = con.createStatement();
         //nomorTelepon = nomorTelepon.replaceFirst("^0+(?!$)", "");
         int aidi = Integer.parseInt(id.getText());
-        stm.executeUpdate("update data set nomor_telepon = '0" + nomorT.getText() + "' where id = '" + aidi + "'");
+        stm.executeUpdate("update data set nomor_telepon = '" + nomorT.getText() + "' where id = '" + aidi + "'");
         JOptionPane.showMessageDialog(null, "Nomor Telepon berhasil disimpan", "Informasi", JOptionPane.INFORMATION_MESSAGE);
         } 
         catch (Exception e) {
@@ -114,7 +114,6 @@ public class Profile extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -173,9 +172,6 @@ public class Profile extends javax.swing.JInternalFrame {
         jLabel5.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
         jLabel5.setText("id");
 
-        jLabel6.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
-        jLabel6.setText("+62");
-
         jLabel7.setText(":");
 
         jLabel8.setText(":");
@@ -204,14 +200,11 @@ public class Profile extends javax.swing.JInternalFrame {
                             .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(37, 37, 37)
-                                .addComponent(jLabel6))
+                            .addComponent(jLabel7)
                             .addComponent(jLabel8)
                             .addComponent(jLabel9)
                             .addComponent(jLabel10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(71, 71, 71)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(nomorT, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(alamat, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -245,7 +238,6 @@ public class Profile extends javax.swing.JInternalFrame {
                     .addComponent(nomorT, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(simpanNT, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel6)
                     .addComponent(jLabel7))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -322,7 +314,6 @@ public class Profile extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

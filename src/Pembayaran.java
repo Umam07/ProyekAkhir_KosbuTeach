@@ -316,7 +316,7 @@ public class Pembayaran extends javax.swing.JFrame implements hitungHarga{
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel25)
                                         .addGap(57, 57, 57))
@@ -324,7 +324,7 @@ public class Pembayaran extends javax.swing.JFrame implements hitungHarga{
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -554,7 +554,7 @@ public class Pembayaran extends javax.swing.JFrame implements hitungHarga{
         // TODO add your handling code here:
         try {
         stm = con.createStatement();
-        stm.executeUpdate("update data set nomor_telepon = '0" + noHp.getText() + "' where id = '" + id + "'");
+        stm.executeUpdate("update data set nomor_telepon = '" + noHp.getText() + "' where id = '" + id + "'");
         JOptionPane.showMessageDialog(null, "Nomor Telepon berhasil disimpan", "Informasi", JOptionPane.INFORMATION_MESSAGE);
         } 
         catch (Exception e) {
